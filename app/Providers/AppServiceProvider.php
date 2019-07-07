@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(
           'App\Repositories\MessageRepositoryInterface',
-          'App\Repositories\MessageRepository',
+          'App\Repositories\MessageRepository'
         );
     }
 
