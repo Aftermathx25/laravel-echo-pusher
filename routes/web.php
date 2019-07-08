@@ -11,13 +11,11 @@
 |
 */
 
-use App\Events\MyEvent;
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', 'MessageController@send')->middleware('auth');
+Route::get('/message/send', 'MessageController@send')->middleware('auth');
 
 Auth::routes();
 

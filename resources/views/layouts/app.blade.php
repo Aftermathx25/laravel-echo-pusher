@@ -8,8 +8,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
 
 
     <!-- Fonts -->
@@ -76,6 +74,17 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script>
+    Echo.private('App.User.{{Auth::id()}}')
+      .listen('SendMessageEvent', (e) => {
+        alert(e.message);
+      });
+    </script>
+
 
 </body>
 </html>

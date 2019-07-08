@@ -12,14 +12,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <script>
-                    Echo.private('App.User.{{Auth::id()}}')
-                      .listen('SendMessageEvent', (e) => {
-                        alert(e.message);
-                      });
-                    </script>
+
 
                     You are logged in!
+
+
+                    <example-component></example-component>
+
                 </div>
             </div>
         </div>
